@@ -1,0 +1,106 @@
+.popline {
+  position: absolute;
+  height: 54px;
+  line-height: 54px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+    background: #228DFF;
+  opacity: 0.9;
+  display: none;
+  margin: 0;
+  list-style: none;
+  padding: 0px 5px;
+  font-family: Arial, Helvetica, "Hiragino Sans GB", sans-serif;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap; }
+  .popline li {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 18px;
+    min-width: 24px;
+    text-align: center;
+    display: inline-block; }
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+      .popline li i {
+        font-weight: bold; } }
+    .popline li .text {
+      font-size: 26.4px; }
+  .popline .hover {
+      opacity: 0.8;
+}
+  .popline .boxed {
+    padding: 0 9px; }
+  .popline .lighter {
+    font-weight: lighter; }
+  .popline .subbar {
+    display: none;
+    list-style: none;
+    padding: 0; }
+  .popline .textfield {
+    border: none;
+    height: 54px;
+    font-size: 24px;
+    padding: 0 10px;
+    background: rgba(74, 74, 74, 0.15);
+    color: #FFFFFF;
+    line-height: 31px;
+    margin-left: 10px;
+    display: none;
+    outline: none;
+    width: 300px; }
+  .popline .textfield::-webkit-input-placeholder {
+    color: #EEE; }
+  .popline .textfield:-moz-placeholder {
+    color: #EEE; }
+  .popline .textfield::-moz-placeholder {
+    color: #EEE; }
+  .popline .textfield:-ms-input-placeholder {
+    color: #EEE; }
+
+.popline-blockquote-button {
+    background: url(popline/quotes-left.png) no-repeat center;
+}
+.popline-bold-button {
+    background: url(popline/bold.png) no-repeat center;
+}
+.popline-italic-button {
+    background: url(popline/italic.png) no-repeat center;
+}
+.popline-strikethrough-button {
+    background: url(popline/strikethrough.png) no-repeat center;
+}
+.popline-underline-button {
+    background: url(popline/underline.png) no-repeat center;
+}
+.popline-justify-button {
+    background: url(popline/menu.png) no-repeat center;
+}
+.popline-justifyLeft-button {
+    background: url(popline/paragraph-left.png) no-repeat center;
+}
+.popline-justifyRight-button {
+    background: url(popline/paragraph-right.png) no-repeat center;
+}
+.popline-justifyCenter-button {
+    background: url(popline/paragraph-center.png) no-repeat center;
+}
+.popline-indent-button {
+    background: url(popline/indent.png) no-repeat center;
+}
+.popline-outdent-button {
+    background: url(popline/outdent.png) no-repeat center;
+}
+.popline-link-button {
+    background: url(popline/link.png) no-repeat center;
+}
+.popline-orderedList-button {
+    background: url(popline/numbered-list.png) no-repeat center;
+}
+.popline-unOrderedList-button {
+    background: url(popline/list.png) no-repeat center;
+}

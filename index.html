@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Studor - 1686 lines</title>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="popline.css">
+        <link rel="stylesheet" href="fa.css">
+        <link rel="stylesheet" href="yue.css">
+        <link rel="stylesheet" href="pickatime/default.css">
+        <link rel="stylesheet" href="pickatime/default.time.css">
+        <link rel="stylesheet" href="DASH/draggable.css">
+        <link rel="stylesheet" href="DASH/style.css">
+        <script src="jquery.js"></script>
+        <script src="DASH/DASH.variable.js"></script>
+        <script src="DASH/script.js"></script>
+        <script src="popline.js"></script>
+        <script src="jquery.popline.blockformat.js"></script>
+        <script src="jquery.popline.blockquote.js"></script>
+        <script src="jquery.popline.decoration.js"></script>
+        <script src="jquery.popline.justify.js"></script>
+        <script src="jquery.popline.link.js"></script>
+        <script src="jquery.popline.list.js"></script>
+        <script src="pickatime/picker.js"></script>
+        <script src="pickatime/picker.time.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <button id="overide">OVERIDE</button>
+        <p id="console"></p>
+        <div class="hiddenForms">
+            <input type="file">
+        </div>
+        <div class="Usidebar">
+            <div id="currentSubAlert">Science</div>
+            <ul class="menu" class="yue">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li id="TRIGGER"></li>
+            </ul>
+            <div id="Msetting"></div>
+        </div>
+        <div class="VPORT" id="notes">
+            <div id="books" class="yue">
+                <div id="bookHeader" class="header">Books</div>
+                <div id="bookOp">
+                    <button id="add" class="new">New book</button>
+                    <button id="remove" class="del">Delete</button>
+                </div>
+                <ul id="bookLi">
+                <li class="book" data-book="science" data-order="0"><p>science</p></li>
+                <li class="book" data-book="math" data-order="1"><p>math</p></li>
+                <li class="book" data-book="english" data-order="2"><p>english</p></li>
+                </ul>
+            </div>
+            <div id="editor" class="yue">
+                <ul id="tab">
+                    <li class="tabI" data-tab="t1">1</li>
+                    <li class="tabI" data-tab="t2">2</li>
+                    <li class="tabI" data-tab="t3">3</li>
+                    <li class="tabI" data-tab="t4">4</li>
+                    <li class="tabI" data-tab="t5">5</li>
+                </ul>
+                <div id="option">
+                    <div id="img" class="opI"></div>
+                    <div id="vm" class="opI">
+                        <input type="text" id="speech" x-webkit-speech>
+                    </div>
+                </div>
+                <div id="textarea" class='editor' contenteditable='true' spellcheck="false"></div>
+            </div>
+        </div>
+        <div class="VPORT" id="flashcards">
+            <div id="sets">
+                <div class="header" id="flashcardHeader">Flashcards</div>
+                <button id="addSet" class="new">New set</button>
+                <button id="delSet" class="del">Delete</button>
+                <ul id="fcSets">
+                    <li class="fcSetCover" data-name="english">
+                        <p class="fcTitle">English</p>
+                        <p class="fcCardNum"><span class="fcNum">2</span> cards</p>
+                    </li>
+                    <li class="fcSetCover" data-name="math">
+                        <p class="fcTitle">Math</p>
+                        <p class="fcCardNum"><span class="fcNum">2</span> cards</p>
+                    </li>
+                    <li class="fcSetCover" data-name="science">
+                        <p class="fcTitle">Science</p>
+                        <p class="fcCardNum"><span class="fcNum">2</span> cards</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="setviewer">
+               <div id="setInfo">
+                   <h3 id="setName">S&E</h3><span id="setCards"><span id="currentcard">3</span>/<span id="totalcard">10</span></span>
+               </div>
+                <div id="fakeCardL"> < </div>
+                <div id="centerCard">
+                    <p id="CCContent">Provide a defenition of the Stock Market</p>
+                    <span class="cardFlip">click to flip</span>
+                </div>
+                <div id="centerCardBACK">
+                    <p id="CCBContent">A place where people buy and sell shares</p>
+                    <span class="cardFlip">click to flip</span>
+                </div>
+                <div id="fakeCardR"> > </div>
+                <div id="editcardset">
+                    <div id="newcard" class="internalnew">+</div>
+                    <div id="delcard" class="internaldel">-</div>
+                </div>
+            </div>
+        </div>
+        <div class="VPORT" id="calendar">
+            <div id="calendarHeader" class="header">Subjects</div>
+            <div id="fullWrap">
+                <div id="timetable">
+                    <div id="days">
+                        <div class="days" id="mon">Monday</div>
+                        <div class="days" id="tue">Tuesday</div>
+                        <div class="days" id="wed">Wednesday</div>
+                        <div class="days" id="thu">Thursday</div>
+                        <div class="days" id="fri">Friday</div>
+                    </div>
+                <div id="subjects">
+                    <ul class="daySub" id="monday"></ul>
+                    <ul class="daySub" id="tuesday"></ul>
+                    <ul class="daySub" id="wednesday"></ul>
+                    <ul class="daySub" id="thursday"></ul>
+                    <ul class="daySub" id="friday"></ul>
+            </div>
+        </div>
+        </div>
+<!--
+            <div id="subject-wrap">
+                <button id="addSub" class="new">New subject</button>
+                <button id="delSub" class="del">Delete</button>
+                <ul id="subjects">
+                    <li class="subjectI" data-subject="Graphic & Animation">
+                        <h3 class="subName">Graphic & Animation</h3>
+                        <p class="subDay">Days: <span class='days'><span class="Tue">T</span>  <span class="Wed">W</span>  <span class="Thu">T</span>  <span class="Fri">F</span></span></p>
+                        <div class="subSure"></div>
+                    </li>
+                    <li class="subjectI" data-subject="Math">
+                        <h3 class="subName">Math</h3>
+                        <p class="subDay">Days: <span class='days'><span class="Mon">M</span>  <span class="Tue">T</span>  <span class="Wed">W</span>  <span class="Fri">F</span></span><span class="Sat">S</span> <span class="Sun">S</span></p>
+                        <div class="subSure"></div>
+                    </li>
+                    <li class="subjectI" data-subject="Science">
+                        <h3 class="subName">Science</h3>
+                        <p class="subDay">Days: <span class='days'><span class="Mon">M</span>  <span class="Tue">T</span>  <span class="Wed">W</span>  <span class="Fri">F</span></span></p>
+                        <div class="subSure"></div>
+                    </li>
+                    <li class="subjectI" data-subject="Cooking">
+                        <h3 class="subName">Cooking</h3>
+                        <p class="subDay">Days: <span class='days'><span class="Mon">M</span>  <span class="Tue">T</span>  <span class="Wed">W</span>  <span class="Fri">F</span></span></p>
+                        <div class="subSure"></div>
+                    </li>
+                </ul>
+            </div>
+            <div id="subEditor">
+                <form action="">
+                    <input type="text" id="subEName" spellcheck="false" autocomplete="off" placeholder="Name" maxlength="24">
+                    <div id="subEDays">
+                        <label for="">Days:</label>
+                        <ul>
+                            <li class="subEDI Mon">Mon</li>
+                            <li class="subEDI Tue">Tue</li>
+                            <li class="subEDI Wed">Wed</li>
+                            <li class="subEDI Thu">Thu</li>
+                            <li class="subEDI Fri">Fri</li>
+                            <li class="subEDI Sat">Sat</li>
+                            <li class="subEDI Sun">Sun</li>
+                        </ul>
+                    </div>
+                    <label for="subETime">Start at:</label>
+                    <input type="text" id="subETime" spellcheck="false" autocomplete="off" class="pickatime">
+                    <br>
+                    <label for="subELast">Duration:</label>
+                    <input type="text" id="subELast" placeholder="minutes" spellcheck="false" autocomplete="off">
+                    <br>
+                    <label for="subEBook">Book:</label>
+                    <input type="text" id="subEBook" spellcheck="false" autocomplete="off">
+                    <input type="submit" value="Save" id="subESub">
+                </form>
+            </div>
+-->
+        </div>
+        <div class="VPORT" id="setting">
+            <div class="header">Settings</div>
+            <div id="saveOp">
+                <h3>Save notes to:</h3>
+                <input type="checkbox" id="gdrive" name="gdrive">
+                <label for="gdrive">Google Drive</label>
+                <input type="checkbox" id="drop" name="drop">
+                <label for="drop">Dropbox</label>
+            </div>
+        </div>
+        <div id="globalInput">
+            <p id="GIName">New book name: </p>
+            <input type="text" autofocus autocomplete="off" spellcheck="false" id="GIInput" placeholder="esc to cancel">
+        </div>
+    </body>
+</html>

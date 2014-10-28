@@ -1,0 +1,506 @@
+@font-face {
+    font-family:'Climacon';
+    src: url('fonts/climacons-webfont.eot');
+    src: url('fonts/climacons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/climacons-webfont.woff') format('woff'),
+         url('fonts/climacons-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+#DASHmenu {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 62, 80,0.75);
+    z-index: 999;
+    opacity: 1;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    margin-top:-1000px;
+}
+#DASHmenu table {
+    width: 40%;
+    height: 40%;
+    margin-left: 30%;
+    margin-top: 10%;
+    position: absolute;
+}
+#DASHmenu table tr td {
+    width: 150px;
+    height: 150px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+#DASHclose {
+    font-family: sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-left: 40px;
+    color: #eee;
+    position: absolute;
+    font-weight: 200;
+}
+#DASHmenu table tr:first-child td:first-child {
+    background: url(cal.png) no-repeat center;
+}
+#DASHmenu table tr:first-child td:nth-child(3) {
+    background: url(clo.png) no-repeat center;
+}
+#DASHmenu table tr:first-child td:nth-child(2) {
+    background: url(wea.png) no-repeat center;
+}
+#DASHmenu table tr:nth-child(2) td:first-child {
+    background: url(tim.png) no-repeat center;
+}
+#DASHmenu table tr:nth-child(2) td:nth-child(2) {
+    background: url(uni.png) no-repeat center;
+}
+.DASHwin {
+    position: absolute;
+    background: grey;
+    width: 303px;
+    height: 280px;
+    margin-top: 15%;
+    margin-left: 30%;
+    opacity: 0;
+    z-index:900;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    -moz-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+    display: none;
+}
+.DASHwincontent {
+    width: 303px;
+    height: 250px;
+    margin-top: 30px;
+    position: absolute;
+    background: #f7f7f7;
+}
+.DASHwinclose {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    float: right;
+    width: 40px;
+    height: 23px;
+    font-weight: 200;
+    color: white;
+    cursor: pointer;
+    padding: 7px 0 0 0;
+    border-top-right-radius: 3px;
+}
+#DASHcalwin {
+    background: rgba(83, 161, 245, 0.9);
+    width: 300px;
+    height: 315px;
+}
+#DASHcalcontent {
+    width: 300px;
+    height: 285px;
+}
+.DASHtitle {
+    position: absolute;
+    text-align:center;
+    width: 40%;
+    margin-left: 30%;
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    margin-top: 7px;
+    color: white;
+}
+#DASHdocwin {
+    background: rgba(86, 182, 113, 0.9);
+    width: 400px;
+    height: 300px;
+}
+#DASHdoccontent {
+    width: 400px;
+    height: 270px;
+}
+#DASHdocclose {
+    background: #56b671;
+}
+#DASHdicwin {
+    background: rgba(255, 255, 255, 0.9);
+    width: 180px;
+    height: 150px;
+}
+#DASHdiccontent {
+    width: 180px;
+    height: 120px;
+    overflow:hidden;
+}
+#DASHdictitle {
+    color: black;
+}
+#DASHdicclose {
+    color: black;
+    background: white;
+}
+#DASHuniclose {
+    background: #cb70d7;
+}
+#DASHuniwin {
+    width: 300px;
+    height: 350px;
+    background: rgba(203, 112, 215, 0.9);
+}
+#DASHunicontent {
+    width: 300px;
+    height: 320px;
+}
+#DASHtimwin {
+    width: 300px;
+    height: 80px;
+    background: rgba(255, 154, 113, 0.9);
+}
+#DASHtimcontent {
+    width: 300px;
+    height: 50px;
+    background: rgba(255, 154, 113, 0.1);
+}
+#DASHtimclose {
+    background: #ff9a71;
+}
+#DASHclowin {
+    width: 300px;
+    height: 130px;
+    background: rgba(172, 138, 253, 0.9);
+}
+#DASHclocontent {
+    width: 300px;
+    height: 100px;
+    background: rgba(172, 138, 253, 0.1);
+}
+#DASHcloclose {
+    background: #ac8afd;
+}
+#DASHcloface {
+    position: absolute;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    width: 300px;
+    margin-top: 5px;
+    text-align:center;
+    cursor:default;
+}
+#clodate {
+    margin-top: 35px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    text-align:center;
+    width: 300px;
+    cursor: default;
+    font-weight: 200;
+    color: #333;
+}
+#clockMode {
+    position: absolute;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    width: 300px;
+    margin-top: 70px;
+    text-align:center;
+    color: #8a68db;
+    cursor: pointer;
+}
+#DASHstiwin {
+    position: absolute;
+    width: 250px;
+    height: 310px;
+    background: rgba(255, 206, 105, 0.9);
+}
+#DASHsticontent {
+    width: 250px;
+    height: 280px;
+}
+#DASHsticlose {
+    background: rgba(255, 206, 105, 1);
+}
+#DASHweawin {
+    width: 300px;
+    height: 190px;
+    background: rgba(0, 180, 204, 0.9);
+}
+#DASHweacontent {
+    width: 300px;
+    height: 160px;
+    overflow: hidden;
+    background: rgba(0, 180, 204, 0.001);
+}
+#DASHweaclose {
+    background: #00b4cc;
+}
+
+//=================================================================================
+
+/* Top portion */
+.top span.clear {
+	float: left;
+}
+
+/* Inset shadow on the screen to create indent */
+.top .screen {
+	height: 60px;
+	width: 300px;
+    padding: 30px;
+	
+	float: right;
+	
+	padding: 0 10px;
+	
+	background: white;
+	
+	/* Typography */
+	font-size: 17px;
+	line-height: 40px;
+	color: #555;
+	text-align: right;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    text-align: right;
+    outline: none;
+    border: none;
+}
+
+/* Clear floats */
+.keys, .top {overflow: hidden;}
+/* Applying same to the keys */
+.keys span, .top span.clear {
+	float: left;
+	position: relative;
+	top: 0;
+	
+	cursor: pointer;
+	
+    padding: 5px 0 0 0;
+	width: 74px;
+	height: 40px;
+	
+	background: white;
+	border: 1px solid #eee;
+	margin: 0 -1px -1px 0;
+	
+	color: #000;
+	line-height: 36px;
+	text-align: center;
+    font-weight: 200;
+	
+	/* prevent selection of text inside keys */
+	user-select: none;
+	
+	/* Smoothing out hover and active states using css3 transitions */
+	transition: all 0.2s ease;
+}
+
+/* Remove right margins from operator keys */
+/* style different type of keys (operators/evaluate/clear) differently */
+
+.keys span.clear {
+    width: 300px;
+    height: 35px;
+	background: white;
+	color: #555;
+}
+
+/* Some hover effects */
+.keys span:hover {
+	background: #eee;
+}
+
+.top span.clear:hover {
+	background: #f68991;
+	color: white;
+}
+#time {
+    position:absolute;
+    width:300px;
+    height:50px;
+    border-radius:3px;
+}
+#watch {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    position:absolute;
+    margin-top:-35px;
+    margin-left:150px;
+    font-size:30px;
+    color:white;
+}
+#play {
+    opacity:1;
+    cursor:pointer;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+#play:hover {
+    opacity:0.5;
+}
+#stop {
+    opacity:1;
+    cursor:pointer;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+#stop:hover {
+    opacity:0.5;
+}
+.sticky {
+    position:absolute;
+    width:250px;
+    height:280px;
+    outline:none;
+    border:none;
+    z-index: 900;
+}
+.textfield {
+    position: absolute;
+    resize:none;
+    width:250px;
+    height:280px;
+    background-color:rgba(255, 206, 105, 1);
+    outline:none;
+    border:none;
+    color:white;
+}
+.plus {
+    font-weight:200;
+    font-family:sans-serif;
+    font-size:30px;
+    margin-left: 170px;
+    margin-top:-30px;
+    color: white;
+    position: absolute;
+    background: rgba(255, 206, 105, 1);
+    width: 40px;
+    font-weight: 200;
+    color: white;
+    cursor: pointer;
+    text-align:center;
+}
+.plus:hover {
+    cursor:pointer;
+}
+#DASHdiccontent iframe {
+    overflow: none;
+    width: 180px;
+    height: 120px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    outline: none;
+    border:none;
+    padding-left:-10px;
+}
+#DASHwealoc {
+    width: 280px;
+    height: 210px;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    opacity: 1;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+}
+#DASHwealoc input {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 200;
+    padding: 5px 10px;
+    text-align:center;
+    width: 280px;
+    outline:none;
+    border: 2px solid #03cbe3;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background: rgba(0, 180, 204, 0.001);
+    color: white;
+}
+#DASHwealoc input::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+}
+#DASHwealoc input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #fff;
+}
+#DASHwealoc input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #fff;
+}
+#DASHwealoc input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #fff;
+}
+input[name=locationCo] {
+    margin-top: 10px;
+}
+input[name=locationCi] {
+    margin-top: 5px;
+}
+input[name=weasubmit] {
+    margin-top: 10px;
+}
+#DASHwealoc:nth-child(3):hover {
+    background: rgba(0, 160, 184, 0.9);
+}
+#wearesult {
+    cursor:default;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    text-align:center;
+    width: 300px;
+    height: 160px;
+    background: inherit;
+    position: absolute;
+    margin-top: 160px;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+}
+#temp {
+    font-size: 35px;
+    margin-top: 25px;
+    width: 300px;
+    text-align:center;
+    position: absolute;
+    margin-left: -150px;
+}
+#weastr {
+    width: 300px;
+    text-align:center;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: -150px;
+}
+#weahum {
+    font-size: 17px;
+    width: 300px;
+    text-align:center;
+    position: absolute;
+    margin-top: 120px;
+    margin-left: -150px;
+}
+#newwea {
+    color: white;
+    width: 40px;
+    height: 30px;
+    margin-left: 260px;
+    background: #00b4cc;
+    padding-top: -10px;
+    cursor: pointer;
+}
