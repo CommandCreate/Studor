@@ -336,11 +336,11 @@ $(document).ready(
         $('#play').click(
             function() {
                 if (!playing) {
-                    $('#play').attr('src','pause.png');
+                    $('#play').attr('src','../img/pause.png');
                     startFn = window.setInterval(startAll, 1);
                     playing = true;
                 } else {
-                    $('#play').attr('src','play.png');
+                    $('#play').attr('src','../img/play.png');
                     reset();
                     playing = false;
                 }

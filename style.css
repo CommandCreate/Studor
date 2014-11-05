@@ -80,22 +80,22 @@ body {
     transition: all 0.25s;
 }
 .menu li:first-child {
-    background: url(no.png) no-repeat center #228DFF;
+    background: url(img/no.png) no-repeat center #228DFF;
 }
 .menu li:nth-child(2) {
-    background: url(fl.png) no-repeat center;
+    background: url(img/fl.png) no-repeat center;
     border-bottom: 2px solid #2d3036;
     border-top: 2px solid #2d3036;
 }
 .menu li:nth-child(3) {
-    background: url(ca.png) no-repeat center;
+    background: url(img/ca.png) no-repeat center;
     border-bottom: 2px solid #2d3036;
 }
 .menu li:nth-child(4) {
-    background: url(dashboard.png) no-repeat center;
+    background: url(img/dashboard.png) no-repeat center;
 }
 #Msetting {
-    background: url(set.png) no-repeat center #4f5258;
+    background: url(img/set.png) no-repeat center #4f5258;
     width: 100px;
     height: 30px;
     list-style: none;
@@ -187,11 +187,11 @@ body {
     background-color: #cdcdcd;
 }
 #img:active {
-    background: url(wimg.png) no-repeat center #228dff;
+    background: url(img/wimg.png) no-repeat center #228dff;
 }
 #img {
     position: absolute;
-    background: url(img.png) no-repeat center;
+    background: url(img/img.png) no-repeat center;
     border-bottom: 4px solid #cdcdcd;
 }
 #books {
@@ -310,7 +310,7 @@ body {
     transition: all 0.25s;
 }
 .new:hover {
-    background: url(add.png) no-repeat left #2EFF60;
+    background: url(img/add.png) no-repeat left #2EFF60;
     color: white;
     padding: 8px 7px 8px 33px;
 }
@@ -336,7 +336,7 @@ body {
     transition: all 0.25s;
 }
 .del:hover {
-    background: url(remove.png) no-repeat left #FF483D;
+    background: url(img/remove.png) no-repeat left #FF483D;
     color: white;
     padding: 8px 7px 8px 33px;
 }
@@ -636,7 +636,7 @@ label[for="gdrive"] {
     position: absolute;
     width: 350px;
     height: 60px;
-    background: url(gdrive.png) no-repeat left;
+    background: url(img/gdrive.png) no-repeat left;
     background-size: 10%;
     padding-left: 45px;
     padding-top: 25px;
@@ -660,7 +660,7 @@ label[for="drop"] {
     position: absolute;
     width: 350px;
     height: 60px;
-    background: url(dropbox.png) no-repeat left;
+    background: url(img/dropbox.png) no-repeat left;
     background-size: 15%;
     padding-left: 55px;
     padding-top: 25px;
